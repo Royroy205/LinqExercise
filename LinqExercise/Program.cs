@@ -63,9 +63,9 @@ namespace LinqExercise
 
             //TODO: Print all the employees' FullName properties to the console only if their FirstName starts with a C OR an S and order this in ascending order by FirstName.
             Console.WriteLine("Employess First Name C and S:");
-            var FiltertedEmployees = employees.Where(person => person.FirstName.StartsWith('C') | person.FirstName.StartsWith('S')).Orderby(person => person);
+            var FiltertedEmployees = employees.Where(person => person.FirstName.StartsWith('C') | person.FirstName.StartsWith('S'))  .OrderBy(person => person.FirstName);
 
-            foreach(var person in FiltertedEmployees) 
+            foreach(var person in FiltertedEmployees)
             { 
               Console.WriteLine(person.FirstName);
             }
